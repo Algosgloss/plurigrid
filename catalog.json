@@ -1,0 +1,214 @@
+{
+  "github:flox/etc-profiles": {
+    "aarch64-darwin": {
+      "profile-base": {
+        "build": [
+          {
+            "hasBin": false,
+            "hasMan": false
+          }
+        ],
+        "element": {
+          "active": true,
+          "attrPath": [
+            "packages",
+            "aarch64-darwin",
+            "profile-base"
+          ],
+          "originalUrl": "github:flox/etc-profiles",
+          "storePaths": [
+            "/nix/store/n37vw86mcj2md1hdb8di78cbib0r3nw6-profile-base-0.1.0"
+          ],
+          "url": "github:flox/etc-profiles/ba7035b87ffc2605302695007bbe5a878c3a08bd"
+        },
+        "eval": {
+          "attrPath": [
+            "packages",
+            "aarch64-darwin",
+            "profile-base"
+          ],
+          "drvPath": "/nix/store/yasn473bvy9xxmp0skjqy6dz0m3haz3y-profile-base-0.1.0.drv",
+          "meta": {
+            "description": "An `<env>/etc/profile' script to source `<env>/etc/profile.d/*.sh`",
+            "longDescription": "An `<env>/etc/profile' script to source `<env>/etc/profile.d/*.sh`\n\nUsers can define and install scripts in `<env>/etc/profile.d' as\n\"custom packages\"/installables to share common setup processes\nacross environments.\n\nRecommended usage:\n  # flox.nix\n  {\n    packages.nixpkgs-flox.sqlite = {\n      meta.outputsToInstall = [\"bin\" \"out\" \"dev\"];\n    };\n    packages.nixpkgs-flox.pkg-config = {};\n    # Provides `<env>/etc/profile' base.\n    packages.\"github:flox/etc-profiles\".profile-base = {};\n    # Adds `0100_common-paths.sh' to `<env>/etc/profile.d/'.\n    packages.\"github:flox/etc-profiles\".profile-common-paths = {};\n\n    shell.hook = ''\n      [[ -r \"$FLOX_ENV/etc/profile\" ]] && . \"$FLOX_ENV/etc/profile\";\n      pkg-config --list-all >&2;\n    ''\n  }\n",
+            "outputsToInstall": [
+              "out"
+            ],
+            "platforms": [
+              "x86_64-linux",
+              "aarch64-linux",
+              "i686-linux",
+              "x86_64-darwin",
+              "aarch64-darwin"
+            ]
+          },
+          "name": "profile-base-0.1.0",
+          "namespace": [],
+          "outputs": {
+            "out": "/nix/store/n37vw86mcj2md1hdb8di78cbib0r3nw6-profile-base-0.1.0"
+          },
+          "pname": "profile-base",
+          "system": "aarch64-darwin",
+          "version": "0.1.0"
+        },
+        "version": 1
+      },
+      "profile-common-paths": {
+        "build": [
+          {
+            "hasBin": false,
+            "hasMan": false
+          }
+        ],
+        "element": {
+          "active": true,
+          "attrPath": [
+            "packages",
+            "aarch64-darwin",
+            "profile-common-paths"
+          ],
+          "originalUrl": "github:flox/etc-profiles",
+          "storePaths": [
+            "/nix/store/5i1524dlbr43did3nx8pxpb4968cl019-profile-common-paths-0.1.0"
+          ],
+          "url": "github:flox/etc-profiles/ba7035b87ffc2605302695007bbe5a878c3a08bd"
+        },
+        "eval": {
+          "attrPath": [
+            "packages",
+            "aarch64-darwin",
+            "profile-common-paths"
+          ],
+          "drvPath": "/nix/store/jazl6phrhl1pngwwhwwahzjb2bymwm2l-profile-common-paths-0.1.0.drv",
+          "meta": {
+            "description": "An `/etc/profile.d/*.sh` script managing common-paths.",
+            "longDescription": "An `/etc/profile.d/*.sh` script managing common-paths.",
+            "outputsToInstall": [
+              "out"
+            ],
+            "platforms": [
+              "x86_64-linux",
+              "aarch64-linux",
+              "i686-linux",
+              "x86_64-darwin",
+              "aarch64-darwin"
+            ]
+          },
+          "name": "profile-common-paths-0.1.0",
+          "namespace": [],
+          "outputs": {
+            "out": "/nix/store/5i1524dlbr43did3nx8pxpb4968cl019-profile-common-paths-0.1.0"
+          },
+          "pname": "profile-common-paths",
+          "system": "aarch64-darwin",
+          "version": "0.1.0"
+        },
+        "version": 1
+      },
+      "profile-node": {
+        "build": [
+          {
+            "hasBin": false,
+            "hasMan": false
+          }
+        ],
+        "element": {
+          "active": true,
+          "attrPath": [
+            "packages",
+            "aarch64-darwin",
+            "profile-node"
+          ],
+          "originalUrl": "github:flox/etc-profiles",
+          "storePaths": [
+            "/nix/store/ymrlnbnj4s2a0rnz0f6c50bqxmjjr9j0-profile-node-0.1.0"
+          ],
+          "url": "github:flox/etc-profiles/ba7035b87ffc2605302695007bbe5a878c3a08bd"
+        },
+        "eval": {
+          "attrPath": [
+            "packages",
+            "aarch64-darwin",
+            "profile-node"
+          ],
+          "drvPath": "/nix/store/082rmdx6mrngly8hpainn6aym3kiz6sk-profile-node-0.1.0.drv",
+          "meta": {
+            "description": "An `/etc/profile.d/*.sh` script managing node.",
+            "longDescription": "An `/etc/profile.d/*.sh` script managing node.",
+            "outputsToInstall": [
+              "out"
+            ],
+            "platforms": [
+              "x86_64-linux",
+              "aarch64-linux",
+              "i686-linux",
+              "x86_64-darwin",
+              "aarch64-darwin"
+            ]
+          },
+          "name": "profile-node-0.1.0",
+          "namespace": [],
+          "outputs": {
+            "out": "/nix/store/ymrlnbnj4s2a0rnz0f6c50bqxmjjr9j0-profile-node-0.1.0"
+          },
+          "pname": "profile-node",
+          "system": "aarch64-darwin",
+          "version": "0.1.0"
+        },
+        "version": 1
+      },
+      "profile-python3": {
+        "build": [
+          {
+            "hasBin": false,
+            "hasMan": false
+          }
+        ],
+        "element": {
+          "active": true,
+          "attrPath": [
+            "packages",
+            "aarch64-darwin",
+            "profile-python3"
+          ],
+          "originalUrl": "github:flox/etc-profiles",
+          "storePaths": [
+            "/nix/store/7nm2fajb5l1i5d486p875dgi75p47yxz-profile-python3-0.1.1"
+          ],
+          "url": "github:flox/etc-profiles/ba7035b87ffc2605302695007bbe5a878c3a08bd"
+        },
+        "eval": {
+          "attrPath": [
+            "packages",
+            "aarch64-darwin",
+            "profile-python3"
+          ],
+          "drvPath": "/nix/store/30nv04vmd4yd9v2j7plhcds7y46i1pas-profile-python3-0.1.1.drv",
+          "meta": {
+            "description": "An `/etc/profile.d/*.sh` script managing python3.",
+            "longDescription": "An `/etc/profile.d/*.sh` script managing python3.",
+            "outputsToInstall": [
+              "out"
+            ],
+            "platforms": [
+              "x86_64-linux",
+              "aarch64-linux",
+              "i686-linux",
+              "x86_64-darwin",
+              "aarch64-darwin"
+            ]
+          },
+          "name": "profile-python3-0.1.1",
+          "namespace": [],
+          "outputs": {
+            "out": "/nix/store/7nm2fajb5l1i5d486p875dgi75p47yxz-profile-python3-0.1.1"
+          },
+          "pname": "profile-python3",
+          "system": "aarch64-darwin",
+          "version": "0.1.1"
+        },
+        "version": 1
+      }
+    }
+  }
+}
